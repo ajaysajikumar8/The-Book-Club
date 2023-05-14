@@ -1,0 +1,130 @@
+{
+	"intents": [
+		{
+			"tag": "greeting",
+			"patterns": [
+				"Hi",
+				"Hey",
+				"How are you",
+				"Is anyone there?",
+				"Hello",
+				"Good day",
+				"hello welcome to our bookstore"
+			],
+			"responses": [
+				"Hey :-)",
+				"Hello, thanks for visiting",
+				"Hi there, what can I do for you?",
+				"Hi there, how can I help?"
+			]
+		},
+		{
+			"tag": "goodbye",
+			"patterns": ["Bye", "See you later", "Goodbye"],
+			"responses": [
+				"See you later, thanks for visiting",
+				"Have a nice day",
+				"Bye! Come back again soon."
+			]
+		},
+
+		{
+			"tag": "hiring",
+			"patterns": [
+				"Are you guys hiring?",
+				"I want to work for your store"
+			],
+			"responses": [
+				"we are not hiring, Sorry",
+				"We are full of employees, Thank you for asking"
+			]
+		},
+		{
+			"tag": "thanks",
+			"patterns": [
+				"Thanks",
+				"Thank you",
+				"That's helpful",
+				"Thank's a lot!"
+			],
+			"responses": ["Happy to help!", "Any time!", "My pleasure"]
+		},
+		{
+			"tag": "books",
+			"patterns": [
+				"Which items do you have?",
+				"What kinds of items are there?",
+				"What do you sell?"
+			],
+			"responses": ["We sell books", "We have books"]
+		},
+		{
+			"tag": "book-types",
+			"patterns": [
+				"Which books do you sell?",
+				"What kinds of books are there?",
+				"What are the genre of the books?"
+			],
+			"responses": [
+				"We sell books of genre- Romance, SCI-FI, Self-Help, Thriller ,Fiction, Horror",
+				"We provide books in the following genres: Romance, SCI-FI, Self-Help, Thriller ,Fiction and Horror",
+				"Books of many genres, including Romance, Science Fiction, Self-Help, Thrillers, Fiction, and Horror, are available from us."
+			]
+		},
+		{
+			"tag": "payments",
+			"patterns": [
+				"Do you take credit cards?",
+				"Do you accept Mastercard?",
+				"Can I pay with Paypal?",
+				"Are you cash only?"
+			],
+			"responses": [
+				"We accept VISA, Mastercard and Paypal",
+				"We accept most major credit cards, and Paypal"
+			]
+		},
+		{
+			"tag": "payments-help",
+			"patterns": ["Do you provide emi?", "Any scope of EMI?"],
+			"responses": [
+				"Sorry we dont provide EMI option",
+				"No, EMI is not provided"
+			]
+		},
+		{
+			"tag": "delivery",
+			"patterns": [
+				"How long does delivery take?",
+				"How long does shipping take?",
+				"When do I get my delivery?"
+			],
+			"responses": ["Delivery takes 2-4 days", "Shipping takes 2-4 days"]
+		},
+		{
+			"tag": "return",
+			"patterns": [
+				"Do you provide return facility",
+				"Do you have a facility for returns?",
+				"DO YOU OFFER A RETURN FACILITY?"
+			],
+			"responses": [
+				"Yes, You can return within 2-4 days of delivery",
+				"You may return items within 2-4 days of delivery",
+				"Yes, within 2-4 days after delivery you may return an item."
+			]
+		},
+		{
+			"tag": "funny",
+			"patterns": [
+				"Tell me a joke!",
+				"Tell me something funny!",
+				"Do you know a joke?"
+			],
+			"responses": [
+				"Backend not trained to crack jokes!",
+				"We dont do that here!"
+			]
+		}
+	]
+}
