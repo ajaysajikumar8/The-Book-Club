@@ -1,7 +1,13 @@
 import numpy as np
 import nltk
+<<<<<<< HEAD
 nltk.download('punkt')
+=======
+
+nltk.download("punkt")
+>>>>>>> 226e0221640bfaf2feb0397338461dd6c6a5936f
 from nltk.stem.porter import PorterStemmer
+
 stemmer = PorterStemmer()
 
 
@@ -38,7 +44,7 @@ def bag_of_words(tokenized_sentence, words):
     # initialize bag with 0 for each word
     bag = np.zeros(len(words), dtype=np.float32)
     for idx, w in enumerate(words):
-        if w in sentence_words: 
+        if w in sentence_words:
             bag[idx] = 1
 
     return bag
