@@ -5,10 +5,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 @app.get("/")
 def index_get():
     return render_template("base.html")
-    
 
 
 @app.post("/predict")
@@ -23,3 +23,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    # hey there
