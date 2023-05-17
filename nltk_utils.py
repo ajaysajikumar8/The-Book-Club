@@ -1,11 +1,7 @@
 import numpy as np
 import nltk
-<<<<<<< HEAD
-nltk.download('punkt')
-=======
 
-nltk.download("punkt")
->>>>>>> 226e0221640bfaf2feb0397338461dd6c6a5936f
+#   nltk.download("punkt")
 from nltk.stem.porter import PorterStemmer
 
 stemmer = PorterStemmer()
