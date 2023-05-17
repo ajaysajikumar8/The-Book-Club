@@ -125,22 +125,7 @@
 				"Backend not trained to crack jokes!",
 				"We dont do that here!"
 			]
-		},
-		{
-			"tag": "dynamic-book-recommendation",
-			"patterns": ["Give me book recommendations"],
-			"responses": [
-				"Backend not trained to crack jokes!",
-				"We dont do that here!"
-			]
-		},
-		{
-			"tag": "dynamic-book-recommendation",
-			"patterns": ["Give me book recommendations"],
-			"responses": [
-				"Backend not trained to crack jokes!",
-				"We dont do that here!"
-			]
 		}
+		
 	]
 }
