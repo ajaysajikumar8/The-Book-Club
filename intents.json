@@ -52,11 +52,16 @@
 		{
 			"tag": "books",
 			"patterns": [
-				"Which items do you have?",
-				"What kinds of items are there?",
-				"What do you sell?"
+				"Which books do you have?",
+				"What kinds of books are there?", 
+				"What books are offered?", 
+				"Can I get a list of the books",
+				"What kind of materials may be borrowed"
 			],
-			"responses": ["We sell books", "We have books"]
+         	"responses": [
+				"We have a wide variety of books such as Novels,Kids Story and Reaserch Papers.", 
+				"You can find all-time favourite novels, Stories and much more."
+			]
 		},
 		{
 			"tag": "book-types",
@@ -125,7 +130,74 @@
 				"Backend not trained to crack jokes!",
 				"We dont do that here!"
 			]
+		},
+		{
+			"tag": "individual",
+			"patterns": [
+				"Book of JK Rowling",
+				"Another Book of JK Rowling"
+			],
+			"responses": [
+				"You can find all Books and Series of JK Rowling visit <a target=\"_blank\" href=\"https://www.amazon.in/s?k=jk+rowling+books&crid=3EFPK1GK0TDMF&sprefix=jk+rowlin%2Caps%2C985&ref=nb_sb_noss_2\">here</a>"
+				
+			]
+		},
+
+		{	"tag": "hours",
+                        "patterns": [
+                                "timing of college",
+                                "what is college timing",
+                                "working days",
+                                "when are you guys open",
+                                "what are your hours",
+                                "hours of operation",
+                                "when is the college open",
+                                "college timing",
+                                "what about college timing",
+                                "is college open on saturday",
+                                "tell something about college timing",
+                                "what is the college  hours",
+                                "when should i come to college",
+                                "when should i attend college",
+                                "what is my college time",
+                                "college timing",
+                                "timing college"
+                        ],
+                        "responses": [
+                                "College is open 9am-5pm Monday-Friday!"
+                        ],
+                        "context_set": ""
+                },
+				{
+					"tag": "infrastructure",
+					"patterns": [
+							"how is college infrastructure",
+							"infrastructure",
+							"college infrastructure"
+					],
+					"responses": [
+							"O P Jindal University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection"
+					],
+					"context_set": ""
+			},
+			{
+				"tag": "placement",
+				"patterns": [
+						"What is college placement",
+						"Which companies visit in college",
+						"What is average package",
+						"companies visit",
+						"package",
+						"placement",
+						"recruitment",
+						"companies"
+				],
+				"responses": [
+						"To know about placement visit <a target=\"_blank\" href=\"http://www.gecdelhi.ac.in/placement1%20first%20page.html/\">here</a>"
+				],
+				"context_set": ""
 		}
+
 		
 	]
 }
