@@ -49,17 +49,22 @@ db.create_all()
 def index_get():
     return render_template("index.html")
 
-@app.get("/explore")
+
+@app.route("/explore")
 def explore_books():
     return render_template("explore.html")
+
+
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template("login.html", form = form)
 
 
 @app.post("/predict")
 def predict():
     text = request.get_json().get("message")
-
     response = get_response(text)
-
     message = {"answer": response}
     return jsonify(message)
 
