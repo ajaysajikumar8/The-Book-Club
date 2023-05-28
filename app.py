@@ -30,7 +30,6 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(250), nullable = False)
 
 
-
 class Book(db.Model):
     __tablename__ = "books"
     id = db.Column(db.Integer, primary_key = True)
@@ -41,7 +40,7 @@ class Book(db.Model):
     price = db.Column(db.Float(), nullable = False)
     img_url = db.Column(db.String(), nullable = False)
 
-
+db.create_all()
 
 
 @app.get("/")
