@@ -1,0 +1,44 @@
+{%include "components/header.html"%}
+
+<main>
+	<section class="section-login d-flex">
+		<div class="container d-flex align-items-center justify-content-center">
+			<div class="wrap-authentication">
+				<div class="img-container">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					Officia accusantium, vel minus laboriosam fugiat nostrum
+					libero recusandae totam cum ducimus error modi suscipit?
+					Consequatur, harum nostrum perferendis quod quaerat ut.
+				</div>
+				<div class="login-container">
+					<img
+						src="{{ url_for('static', filename='images/logo.png') }}"
+						alt="The Book Club"
+						class="logo"
+					/>
+
+					{% with messages = get_flashed_messages()%}
+          				{% for message in messages: %}
+            				<p class="login-flash-msg">{{message}}</p>
+         				{% endfor %}
+        			{% endwith %}
+			
+					<form class="login-form" action="{{url_for('login')}}" method="post" novalidate="True">
+						<input type="text" name="email" class="login-input" placeholder="Email">
+						<input type="password" name="password" class="login-input" placeholder="Password">
+						<div class="container-login-form-btn mt-2">
+							<input type="submit" class="btn btn--full" value="Login">
+						</div>
+
+						<div class="text-center mt-2">
+							<span class="txt1"> Dont have an account ? </span>
+							<a class="txt2" href="{{url_for('register')}}">
+								Sign Up
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>

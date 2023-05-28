@@ -143,9 +143,16 @@ p {
 	color: #fff;
 }
 
+.btn--full,
+.btn--full {
+	background-color: #e83820;
+	color: #fff;
+}
+
 .btn--full:hover,
 .btn--full:active {
 	background-color: #bb1f1f;
+	color: #fff;
 }
 
 .btn--outline:link,
