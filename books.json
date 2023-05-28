@@ -1,0 +1,12 @@
+{
+    "books" : [
+        {
+            "title" : "True Biz",
+            "author": "Sara Nović",
+            "genre" : "Fiction",
+            "rating": "4.12",
+            "price" : "449",
+            "img_url" : "https://shorturl.at/yG579"  
+        }   
+    ]
+}
