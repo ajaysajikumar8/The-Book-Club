@@ -264,7 +264,8 @@ footer {
 	width: 50%;
 	padding: 1.8em 2.6rem;
 	border-radius: 0.6rem;
-	background-color: #fdebe9;
+	/* background-color: #fdebe9; */
+	box-shadow: 0rem 0rem 0.15rem rgba(0, 0, 0, 0.315);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -277,6 +278,10 @@ footer {
 	margin-bottom: 0.7rem;
 }
 
+.login-container .login-flash-msg{
+	color: red;
+}
+
 .login-container .login-form {
 	width: 100%;
 	display: flex;
@@ -287,23 +292,24 @@ footer {
 }
 
 .login-form .login-input {
-    width: 100%;
-    padding: 0.2rem 0.4rem;
-    border: 1px solid rgba(0, 0, 0, 0.315);
-    border-radius: 0.3rem;
+	width: 100%;
+	padding: 0.2rem 0.4rem;
+	border: 1px solid rgba(0, 0, 0, 0.315);
+	border-radius: 0.3rem;
 }
 
-.login-form .btn--full{
+.login-form .btn--full {
 	margin-top: 0.3rem;
 }
 
-.login-form .txt2:link, .login-form .txt2:visited{
-	color: #E83820;
-	background-color: #fdefed;
+.login-form .txt2:link,
+.login-form .txt2:visited {
+	color: #e83820;
 	transition: all 0.3s;
 }
 
-.login-form .txt2:hover, .login-form .txt2:active{
+.login-form .txt2:hover,
+.login-form .txt2:active {
 	color: #bb1f1f;
 }
 /*============================================= */
