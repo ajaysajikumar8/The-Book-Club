@@ -3,7 +3,19 @@
 <section class="section-book" id="">
 	<div class="container">
 		<div class="d-flex justify-content-between align-items-center">
-			<h2 class="heading-secondary">{{book.title}}</h2>
+			<div class="book-img-container"><img class="book-imgs" src="{{ book.img_url }}" alt="">
+			<div class="book-info-container">
+				<p class="book-info-genre subtitle">{{book.genre}}</p>
+				<h2 class="book-info-title">{{book.title}}</h2>
+				<p class="book-info-author">{{book.author}}</p>
+				<p class="book-info-price"><i class="fas fa-rupee-sign"></i>{{book.price}}</p>
+				<p class="book-info-rating"><i class="fas fa-star"></i>{{book.rating}}/5</p>
+				<div class="book-info-description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo nobis ratione accusamus quam, assumenda corrupti quo repudiandae consectetur itaque repellendus eveniet ab laboriosam voluptas saepe pariatur culpa quidem excepturi.</p>
+				</div>
+				
+			</div>
+			</div>
 		</div>
 	</div>
 </section>
