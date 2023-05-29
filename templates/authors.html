@@ -1,0 +1,22 @@
+{% include "components/header.html" %}
+{% include "components/nav.html" %}
+
+
+<section class="section-authors" id="">
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">
+				Popular Authors
+			</h2>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for author in authors: %}
+			<p>{{author}}</p>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+
+{% include "components/chatbot.html" %}
+{% include "components/footer.html" %}
