@@ -65,33 +65,35 @@
 		<div class="row category-container align-items-center">
 			{% for book in bestselling_books[:6] %}
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<div class="product-card">
-					<div class="product-img d-flex justify-content-center">
-						<img
-							src="{{book.img_url}}"
-							alt="{{book.title}}"
-							class="product-img"
-						/>
-					</div>
-					<div class="product-content">
-						<p class="product-subtitle">{{book.genre}}</p>
-						<h5 class="product-title">{{book.title}}</h5>
-						<p class="product-author">{{book.author}}</p>
-						<p class="product-price"></p>
-						<div
-							class="product-options d-flex justify-content-between"
-						>
-							<ion-icon
-								name="bag-handle-outline"
-								class="icon icon--bag"
-							></ion-icon>
-							<ion-icon
-								name="heart-outline"
-								class="icon icon--wish"
-							></ion-icon>
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="{{book.title}}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			{% endfor %}
 		</div>
@@ -114,33 +116,35 @@
 		<div class="row category-container align-items-center">
 			{% for book in fiction_books[:6] %}
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<div class="product-card">
-					<div class="product-img d-flex justify-content-center">
-						<img
-							src="{{book.img_url}}"
-							alt="Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin"
-							class="product-img"
-						/>
-					</div>
-					<div class="product-content">
-						<p class="product-subtitle">{{book.genre}}</p>
-						<h5 class="product-title">{{book.title}}</h5>
-						<p class="product-author">{{book.author}}</p>
-						<p class="product-price"></p>
-						<div
-							class="product-options d-flex justify-content-between"
-						>
-							<ion-icon
-								name="bag-handle-outline"
-								class="icon icon--bag"
-							></ion-icon>
-							<ion-icon
-								name="heart-outline"
-								class="icon icon--wish"
-							></ion-icon>
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			{% endfor %}
 		</div>
@@ -161,33 +165,35 @@
 		<div class="row category-container align-items-center">
 			{% for book in romance_books[0:6]: %}
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<div class="product-card">
-					<div class="product-img d-flex justify-content-center">
-						<img
-							src="{{book.img_url}}"
-							alt="{{book.title}}"
-							class="product-img"
-						/>
-					</div>
-					<div class="product-content">
-						<p class="product-subtitle">{{book.genre}}</p>
-						<h5 class="product-title">{{book.title}}</h5>
-						<p class="product-author">{{book.author}}</p>
-						<p class="product-price"></p>
-						<div
-							class="product-options d-flex justify-content-between"
-						>
-							<ion-icon
-								name="bag-handle-outline"
-								class="icon icon--bag"
-							></ion-icon>
-							<ion-icon
-								name="heart-outline"
-								class="icon icon--wish"
-							></ion-icon>
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="{{book.title}}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			{% endfor %}
 		</div>
@@ -208,33 +214,35 @@
 		<div class="row category-container align-items-center">
 			{% for book in thriller_books[0:6]:%}
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<div class="product-card">
-					<div class="product-img d-flex justify-content-center">
-						<img
-							src="{{ book.img_url }}"
-							alt="{{ book.title }}"
-							class="product-img"
-						/>
-					</div>
-					<div class="product-content">
-						<p class="product-subtitle">{{book.genre}}</p>
-						<h5 class="product-title">{{book.title}}</h5>
-						<p class="product-author">{{book.author}}</p>
-						<p class="product-price"></p>
-						<div
-							class="product-options d-flex justify-content-between"
-						>
-							<ion-icon
-								name="bag-handle-outline"
-								class="icon icon--bag"
-							></ion-icon>
-							<ion-icon
-								name="heart-outline"
-								class="icon icon--wish"
-							></ion-icon>
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{ book.img_url }}"
+								alt="{{ book.title }}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			{% endfor %}
 		</div>
@@ -258,33 +266,35 @@
 			{% for book in scifi_books[0:6]:%}
 
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<div class="product-card">
-					<div class="product-img d-flex justify-content-center">
-						<img
-							src="{{ book.img_url }}"
-							alt="{{ book.title }}"
-							class="product-img"
-						/>
-					</div>
-					<div class="product-content">
-						<p class="product-subtitle">{{book.genre}}</p>
-						<h5 class="product-title">{{book.title}}</h5>
-						<p class="product-author">{{book.author}}</p>
-						<p class="product-price"></p>
-						<div
-							class="product-options d-flex justify-content-between"
-						>
-							<ion-icon
-								name="bag-handle-outline"
-								class="icon icon--bag"
-							></ion-icon>
-							<ion-icon
-								name="heart-outline"
-								class="icon icon--wish"
-							></ion-icon>
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{ book.img_url }}"
+								alt="{{ book.title }}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			{% endfor %}
 		</div>

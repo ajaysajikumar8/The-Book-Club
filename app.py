@@ -81,6 +81,7 @@ class Book(db.Model):
 #     db.session.commit()
 
 
+
 @app.get("/")
 def home():
     return render_template("index.html")
@@ -111,6 +112,14 @@ def explore_genre(genre):
     return render_template("genre.html", books=books)
 
 
+@app.route("/explore/book/<book>")
+@login_required
+def get_book(book):
+    book_title = book
+    book = Book.query.filter_by(title=book_title).first()
+    return render_template("book.html", book=book)
+
+
 @app.route("/explore/authors")
 @login_required
 def explore_authors():
@@ -118,7 +127,8 @@ def explore_authors():
     authors = []
     for book in books:
         authors.append(book.author)
-        
+    
+    authors = list(set(authors))
     return render_template("authors.html", authors=authors)
 
 
