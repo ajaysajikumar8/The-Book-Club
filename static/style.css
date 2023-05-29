@@ -246,6 +246,7 @@ footer {
 /*============================================= */
 /*============================================= */
 /*============================================= */
+
 .section-login {
 	height: 100vh;
 }
@@ -311,7 +312,53 @@ footer {
 .login-form .txt2:hover,
 .login-form .txt2:active {
 	color: #bb1f1f;
+	
 }
+
+		/* ///////////////////////////////////////
+		///////////////////////////////////////
+		/////////Chatbot Image///////////////// */
+
+
+		.image-chat {
+			position: relative;
+			width: 50%;
+			height: auto;
+		  }
+	  
+		  .image-chat img {
+			position: absolute;
+			width: 70%;
+			height: 110%;
+			opacity: 0;
+			border-radius: 10%;
+			animation: fadeAnimation 7s linear infinite;
+			transform: translate(20%, -5%);
+		  }
+	  
+		  .image-chat img:first-child {
+			animation-delay: 1.4s;
+		  }
+	  
+		  .image-chat img:last-child {
+			animation-delay: 4s;
+		  }
+	  
+		  @keyframes fadeAnimation {
+			0% {
+			  opacity: 0;
+			}
+			50% {
+			  opacity: 1;
+			}
+			100% {
+			  opacity: 0;
+			}
+		  }
+
+
+		  
+		
 /*============================================= */
 /*============================================= */
 /*====================CHATBOX================== */
@@ -608,80 +655,6 @@ footer {
 	margin-bottom: 1.8rem;
 	transform: translate(0%, -110%);
 	position: relative;
-}
-
-/*Book Section */
-
-.section-books {
-	height: 100vh;
-	background-size: cover;
-	background: black; /* Replace with your desired gradient colors */
-	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
-	padding: 30px;
-	color: #ffffff;
-}
-
-.book-circle {
-	width: 400px;
-	height: 400px;
-	position: relative;
-	margin: 0 auto;
-	transform: translate(20%, 70%);
-}
-
-.book {
-	position: absolute;
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	opacity: 0;
-	animation: fadeIn 10s infinite;
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 0.2;
-	}
-	40% {
-		opacity: 0.4;
-	}
-	60% {
-		opacity: 0.6;
-	}
-	80% {
-		opacity: 0.8;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.book:nth-child(1) {
-	transform: rotate(45deg) translate(240px) rotate(-45deg);
-}
-.book:nth-child(2) {
-	transform: rotate(90deg) translate(240px) rotate(-90deg);
-}
-.book:nth-child(3) {
-	transform: rotate(135deg) translate(240px) rotate(-135deg);
-}
-.book:nth-child(4) {
-	transform: rotate(180deg) translate(240px) rotate(-180deg);
-}
-.book:nth-child(5) {
-	transform: rotate(225deg) translate(240px) rotate(-225deg);
-}
-.book:nth-child(6) {
-	transform: rotate(270deg) translate(240px) rotate(-270deg);
-}
-.book:nth-child(7) {
-	transform: rotate(315deg) translate(240px) rotate(-315deg);
-}
-.book:nth-child(8) {
-	transform: rotate(0deg) translate(240px) rotate(-0deg);
 }
 
 /*services*/
