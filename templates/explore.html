@@ -5,33 +5,33 @@
 		<p class="subtitle">Collections</p>
 		<div class="d-flex justify-content-between align-items-center">
 			<h2 class="heading-secondary">Browse Categories</h2>
-			<a href="" class="view-all-btn"
+			<!-- <a href="" class="view-all-btn"
 				><span>View All</span>
 				<ion-icon name="chevron-forward-outline"></ion-icon
-			></a>
+			></a> -->
 		</div>
 		<div class="row category-container">
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<a href="#fiction-cat"
+				<a href="{{url_for('explore_genre', genre='Fiction')}}"
 					><div class="category-box category--fiction">
 						Fiction
 					</div></a
 				>
 			</div>
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<a href="#romance-cat">
+				<a href="{{url_for('explore_genre', genre='Romance')}}">
 					<div class="category-box category--romance">Romance</div></a
 				>
 			</div>
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<a href="#thriller-cat">
+				<a href="{{url_for('explore_genre', genre='Thriller')}}">
 					<div class="category-box category--thriller">
 						Thriller
 					</div></a
 				>
 			</div>
 			<div class="col-sm-12 col-md-4 col-lg-2">
-				<a href="#scifi-cat">
+				<a href="{{url_for('explore_genre', genre='Sci-Fi')}}">
 					<div class="category-box category--scifi">Sci-Fi</div></a
 				>
 			</div>

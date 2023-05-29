@@ -1,66 +1,127 @@
 <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{url_for('home')}}"
-                ><img
-                    src="{{ url_for('static', filename='images/logo.png') }}"
-                    alt="The Book Club"
-                    class="logo"
-                />
-            </a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-                class="collapse navbar-collapse"
-                id="navbarSupportedContent"
-            >
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a
-                            class="nav-link active"
-                            aria-current="page"
-                            href="{{url_for('home')}}"
-                            >Home</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"
-                            >Categories</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Pages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Others</a>
-                    </li>
-                </ul>
-                <div class="d-flex authentication-box">
-                    
-
-                    {% if current_user.is_authenticated: %}
-                    <a class="btn btn--outline" href="{{url_for('logout')}}"> Logout </a>
-                    {% else: %}
-                    <a class="btn btn--outline" href="{{url_for('login')}}"> Login </a>
-                    <a class="btn btn--full" href="{{url_for('register')}}"> Sign Up </a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </nav>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="{{url_for('home')}}"
+				><img
+					src="{{ url_for('static', filename='images/logo.png') }}"
+					alt="The Book Club"
+					class="logo"
+				/>
+			</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto">
+					{% if current_user.is_authenticated: %}
+					<li class="nav-item">
+						<a
+							class="nav-link active"
+							aria-current="page"
+							href="{{url_for('home')}}"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle active"
+							href="#"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Explore
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_books')}}"
+									>Books</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_books')}}"
+									>Authors</a
+								>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle active"
+							href="#"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Categories
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_genre', genre='Fiction')}}"
+									>Fiction</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_genre', genre='Romance')}}"
+									>Romance</a
+								>
+							</li>
+							<!-- <li><hr class="dropdown-divider"></li> -->
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_genre', genre='Thriller')}}"
+									>Thriller</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item"
+									href="{{url_for('explore_genre', genre='Sci-Fi')}}"
+									>Sci-Fi</a
+								>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Self Help</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Horror</a>
+							</li>
+						</ul>
+					</li>
+					{% endif %}
+				</ul>
+				<div class="d-flex authentication-box">
+					{% if current_user.is_authenticated: %}
+					<a class="btn btn--outline" href="{{url_for('logout')}}">
+						Logout
+					</a>
+					{% else: %}
+					<a class="btn btn--outline" href="{{url_for('login')}}">
+						Login
+					</a>
+					<a class="btn btn--full" href="{{url_for('register')}}">
+						Sign Up
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</nav>
 </header>

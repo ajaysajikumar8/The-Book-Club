@@ -100,9 +100,34 @@ def explore_books():
         bestselling_books=bestselling_books,
         romance_books=romance_books,
         fiction_books=fiction_books,
-        thriller_books = thriller_books,
-        scifi_books = scifi_books
+        thriller_books=thriller_books,
+        scifi_books=scifi_books,
     )
+
+
+@app.route("/explore/books/<genre>")
+@login_required
+def explore_genre(genre):
+    books = Book.query.filter_by(genre=genre).order_by(Book.rating.desc()).all()
+    return render_template("genre.html", books=books)
+
+
+@app.route("/explore/authors")
+@login_required
+def explore_authors():
+    books = Book.query.order_by(Book.rating.desc()).all()
+    authors = []
+    for book in books:
+        authors.append(book.author)
+        
+    return render_template("authors.html", authors=authors)
+
+
+@app.route("/explore/authors/<author>")
+@login_required
+def explore_author_books(author):
+    books = Book.query.filter_by(author=author).order_by(Book.rating.desc()).all()
+    return render_template("author_books.html", books=books)
 
 
 @app.route("/login", methods=["GET", "POST"])
