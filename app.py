@@ -81,6 +81,11 @@ class Book(db.Model):
 #     db.session.commit()
 
 
+# CODE FOR GETTING RETURNING BOOK TO USER
+# def get_books_by_author(author):
+#     books = db.session.query(Book).filter_by(author=author).all()
+#     return [book.title for book in books]
+
 
 @app.get("/")
 def home():
@@ -110,6 +115,15 @@ def explore_books():
 def explore_genre(genre):
     books = Book.query.filter_by(genre=genre).order_by(Book.rating.desc()).all()
     return render_template("genre.html", books=books)
+
+@app.route("/explore/authors/<genre>")
+@login_required
+def explore_genre_authors(genre):
+    books = Book.query.filter_by(genre=genre).order_by(Book.rating.desc()).all()
+    authors = []
+    for book in books:
+        authors.append(book.author)
+    return render_template("authors.html", authors=authors)
 
 
 @app.route("/explore/book/<book>")

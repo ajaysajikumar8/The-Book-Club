@@ -414,12 +414,11 @@
 //////////////////////////////////////
 ///////////////////////////////////////////
 ////////////section-book/////////////////// */
-.section-book .container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: fit-content;
-	min-height: 80vh;;
+    height: 40vh;
   }
 
 .book-img-container {
@@ -428,8 +427,7 @@
     max-width: fit-content;
 	transform: translate(0%, 0%);
 	justify-content: center;
-	margin-top: 2rem;
-	
+	margin-top: 150px;
   }
 
   .book-imgs {
