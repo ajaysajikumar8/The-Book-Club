@@ -146,7 +146,7 @@ def explore_authors():
     return render_template("authors.html", authors=authors)
 
 
-@app.route("/explore/authors/<author>")
+@app.route("/explore/authors/books/<author>")
 @login_required
 def explore_author_books(author):
     books = Book.query.filter_by(author=author).order_by(Book.rating.desc()).all()
