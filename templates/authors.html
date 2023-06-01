@@ -1,0 +1,21 @@
+{% include "components/header.html" %} {% include "components/nav.html" %}
+
+<section class="section-authors" id="">
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">Popular Authors</h2>
+		</div>
+		<div class="row category-container">
+			{% for author in authors: %}
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('explore_author_books', author=author)}}"
+					><div class="category-box category--fiction">
+						{{author}}
+					</div></a
+				>
+			</div>
+            {% endfor %}
+		</div>
+	</div>
+</section>
+ {% include "components/footer.html" %}

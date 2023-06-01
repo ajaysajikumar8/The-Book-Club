@@ -45,9 +45,6 @@ def get_response(msg):
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 return random.choice(intent["responses"])
-            # if (tag == intent["tag"] and tag == "dynamic-book-recommendation"):
-            #     fetch_data()
-
     return "I do not understand..."
 
 

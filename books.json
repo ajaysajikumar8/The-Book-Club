@@ -1,0 +1,28 @@
+{
+    "books" : [
+        {
+            "title" : "True Biz",
+            "author": "Sara Nović",
+            "genre" : "Fiction",
+            "rating": "4.12",
+            "price" : "449",
+            "img_url" : "https://shorturl.at/yG579"  
+        },
+        {
+            "title" : "Life in Five Senses",
+            "author": "Gretchen Rubin",
+            "genre" : "Self Help",
+            "rating": "3.99",
+            "price" : "849",
+            "img_url" : "https://shorturl.at/fACI0"  
+        },
+        {
+            "title" : "Sisters of the Lost Nation",
+            "author": "Nick Medina",
+            "genre" : "Horror",
+            "rating": "3.90",
+            "price" : "949",
+            "img_url" : "https://shorturl.at/fsQYZ"  
+        }      
+    ]
+}

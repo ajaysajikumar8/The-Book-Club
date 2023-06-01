@@ -1,0 +1,334 @@
+{% include "components/header.html" %} {% include "components/nav.html" %}
+
+<section class="section-categories">
+	<div class="container">
+		<p class="subtitle">Collections</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">Browse Categories</h2>
+			<!-- <a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a> -->
+		</div>
+		<div class="row category-container">
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('explore_genre', genre='Fiction')}}"
+					><div class="category-box category--fiction">
+						Fiction
+					</div></a
+				>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('explore_genre', genre='Romance')}}">
+					<div class="category-box category--romance">Romance</div></a
+				>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('explore_genre', genre='Thriller')}}">
+					<div class="category-box category--thriller">
+						Thriller
+					</div></a
+				>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('explore_genre', genre='Sci-Fi')}}">
+					<div class="category-box category--scifi">Sci-Fi</div></a
+				>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="#">
+					<div class="category-box category--selfhelp">
+						Self Help
+					</div></a
+				>
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="#">
+					<div class="category-box category--horror">Horror</div></a
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- BESTSELLER SECTION -->
+<section class="section-bestselling" id="bestselling-cat">
+	<div class="container">
+		<p class="subtitle">Popular</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">Bestselling Books</h2>
+			<a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for book in bestselling_books[:6] %}
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="{{book.title}}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!-- FICTION SECTION -->
+<section class="section-fiction" id="fiction-cat">
+	<div class="container">
+		<p class="subtitle">Fiction</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">
+				Unleash Your Imagination with Fiction
+			</h2>
+			<a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for book in fiction_books[:6] %}
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!-- ROMANCE SECTION -->
+<section class="section-romance" id="romance-cat">
+	<div class="container">
+		<p class="subtitle">Romance</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">Journey into the World of Romance</h2>
+			<a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for book in romance_books[0:6]: %}
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{book.img_url}}"
+								alt="{{book.title}}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!-- THRILLER SECTION -->
+<section class="section-thriller" id="thriller-cat">
+	<div class="container">
+		<p class="subtitle">thriller</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">Unlock the Secrets of Mystery</h2>
+			<a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for book in thriller_books[0:6]:%}
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{ book.img_url }}"
+								alt="{{ book.title }}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!-- SCIFI SECTION -->
+<section class="section-fiction" id="scifi-cat">
+	<div class="container">
+		<p class="subtitle">science Fiction</p>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="heading-secondary">
+				Discover the Wonders of Science Fiction
+			</h2>
+			<a href="" class="view-all-btn"
+				><span>View All</span>
+				<ion-icon name="chevron-forward-outline"></ion-icon
+			></a>
+		</div>
+		<div class="row category-container align-items-center">
+			{% for book in scifi_books[0:6]:%}
+
+			<div class="col-sm-12 col-md-4 col-lg-2">
+				<a href="{{url_for('get_book', book=book.title)}}">
+					<div class="product-card">
+						<div class="product-img d-flex justify-content-center">
+							<img
+								src="{{ book.img_url }}"
+								alt="{{ book.title }}"
+								class="product-img"
+							/>
+						</div>
+						<div class="product-content">
+							<p class="product-subtitle">{{book.genre}}</p>
+							<h5 class="product-title">{{book.title}}</h5>
+							<p class="product-author">{{book.author}}</p>
+							<p class="product-price"></p>
+							<div
+								class="product-options d-flex justify-content-between"
+							>
+								<ion-icon
+									name="bag-handle-outline"
+									class="icon icon--bag"
+								></ion-icon>
+								<ion-icon
+									name="heart-outline"
+									class="icon icon--wish"
+								></ion-icon>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<!-- CTA/NEWSLETTER SECTION -->
+<section class="section-newsletter d-flex align-items-center">
+	<div class="container">
+		<div class="newsletter-cta">
+			<p class="subtitle subtitle--cta mb-4">keep updated</p>
+			<h2 class="heading-secondary mb-3 text-light">
+				Subscribe to Our Newsletter
+			</h2>
+			<p class="cta-description mx-2">
+				Signup to be the first to hear about exclusive deals, special
+				offers and upcoming collections
+			</p>
+			<div class="container">
+				<form action="" class="row justify-content-center gap-3">
+					<input
+						type="text"
+						placeholder="Enter email for weekly newsletter"
+						class="cta-email-input col-sm-12 col-md-7 col-lg-6"
+					/>
+					<input
+						type="submit"
+						value="Subscribe"
+						class="cta-subscribe col-sm-6 col-md-2"
+					/>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include "components/chatbot.html" %} {% include "components/footer.html" %}

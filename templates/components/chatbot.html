@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img
+                        src="{{url_for('static', filename='images/circled-user-female-skin-type-5--v1.png')}}"
+                        alt="image"
+                    />
+                </div>
+                <div class="chatbox__content--header">
+                    <p class="chatbox__heading--header m-0">
+                        Chat support
+                    </p>
+                    <p class="chatbox__description--header m-0">
+                        Hi. My name is Amanda. How can I help you?
+                    </p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input
+                    type="text"
+                    placeholder="Write a message..."
+                />
+                <button class="chatbox__send--footer send__button">
+                    Send
+                </button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button>
+                <img
+                    src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"
+                    width="36px"
+                />
+            </button>
+        </div>
+    </div>
+</div>

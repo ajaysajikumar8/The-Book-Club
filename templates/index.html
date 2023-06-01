@@ -1,0 +1,97 @@
+{% include "components/header.html"%} {% include "components/nav.html"%}
+
+<main>
+	<section class="section-hero d-flex">
+		<div class="container">
+			<div class="hero row">
+				<div class="hero-textbox col-sm-12 col-md-6">
+					<h1 class="heading-primary">
+						From mystery to romance, we have books to suit every
+						taste
+					</h1>
+					<p class="hero-description">
+						With easy browsing and hassle-free delivery, we make it
+						easy for you to indulge in your reading passion. Find
+						your next adventure today!
+					</p>
+					{% if current_user.is_authenticated: %}
+					<a href="{{url_for('explore_books')}}" class="btn btn--full"
+						>Explore Now</a
+					>
+					{% else: %}
+					<a href="{{url_for('login')}}" class="btn btn--full"
+						>Explore Now</a
+					>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Landing Page -->
+	<section class="section-landing">
+		<h1 class="heading-primary-up">
+			Read what you want, <br />
+			when you want…!
+		</h1>
+		<div class="book-stack">
+			<img src="https://shorturl.at/gAJ12" alt="Book 1" />
+			<img src="https://shorturl.at/uwxzI" alt="Book 2" />
+			<img src="https://shorturl.at/deqIS" alt="Book 3" />
+			<img src="https://shorturl.at/be168" alt="Book 4" />
+			<img src="https://shorturl.at/gzHU6" alt="Book 5" />
+		</div>
+
+		<div class="book-stackk">
+			<img src="https://shorturl.at/oxJM8" alt="Book 6" />
+			<img src="https://shorturl.at/HTVX8" alt="Book 7" />
+			<img src="https://shorturl.at/gmC89" alt="Book 8" />
+			<img src="https://shorturl.at/GPR24" alt="Book 9" />
+			<img src="https://shorturl.at/nGNX6" alt="Book 10" />
+		</div>
+
+		<p class="hero-description-up">
+			Welcome to our enchanting book store,<br />
+			where stories come to life and imaginations take flight. <br />
+			Nestled within our cozy walls, <br />
+			you'll find a treasure trove of literary delights, <br />
+			waiting to be discovered. <br />
+			Step inside and immerse yourself <br />
+			in the captivating scent of aged pages <br />
+			and the whispered promises of <br />
+			countless adventures.
+		</p>
+	</section>
+	<!-- CTA/NEWSLETTER SECTION -->
+	<section class="section-newsletter d-flex align-items-center">
+		<div class="container">
+			<div class="newsletter-cta">
+				<p class="subtitle subtitle--cta mb-4">keep updated</p>
+				<h2 class="heading-secondary mb-3 text-light">
+					Subscribe to Our Newsletter
+				</h2>
+				<p class="cta-description mx-2">
+					Signup to be the first to hear about exclusive deals,
+					special offers and upcoming collections
+				</p>
+				<div class="container">
+					<form action="" class="row justify-content-center gap-3">
+						<input
+							type="text"
+							placeholder="Enter email for weekly newsletter"
+							class="cta-email-input col-sm-12 col-md-7 col-lg-6"
+						/>
+						<input
+							type="submit"
+							value="Subscribe"
+							class="cta-subscribe col-sm-6 col-md-2"
+						/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER SECTION -->
+	{% include "components/footer.html" %}
+</main>

@@ -8,14 +8,17 @@
 				"How are you",
 				"Is anyone there?",
 				"Hello",
-				"Good day",
-				"hello welcome to our bookstore"
+				"Good day"
 			],
 			"responses": [
 				"Hey :-)",
-				"Hello, thanks for visiting",
+				"Hello",
+				"Hi there:-)",
+				"Hey, what's up?",
 				"Hi there, what can I do for you?",
-				"Hi there, how can I help?"
+				"Hi there, how can I help?",
+				"Hello, what can I do to help you?",
+				"How may I help you, please?"
 			]
 		},
 		{
@@ -25,6 +28,33 @@
 				"See you later, thanks for visiting",
 				"Have a nice day",
 				"Bye! Come back again soon."
+			]
+		},
+		{
+			"tag": "acknowledge",
+			"patterns": ["Okay", "Alright", "Got it", "I understand", "Sure"],
+			"responses": [
+				"Good to know!",
+				"Alright!",
+				"Great!",
+				"I'm glad I could help!",
+				"I'm happy I could be of assistance.",
+				"Happy to have been of assistance!"
+			]
+		},
+		{
+			"tag": "help",
+			"patterns": [
+				"Can you help me?",
+				"I need assistance",
+				"Help me with this",
+				"I'm stuck, can you help?"
+			],
+			"responses": [
+				"Of course, I'm here to help!",
+				"Sure, I'll do my best to assist you.",
+				"I'm here to provide any help you need.",
+				"Certainly, what do you need help with?"
 			]
 		},
 
@@ -40,6 +70,46 @@
 			]
 		},
 		{
+			"tag": "services",
+			"patterns": [
+				"What does this website do ?",
+				"Why is this website there?",
+				"How does this website function?",
+				"what does the site do?",
+				"What is the website used for?",
+				"what are your commands",
+				"what are your instructions?"
+			],
+			"responses": [
+				"We sell books",
+				"We market books.",
+				"We offer books."
+			]
+		},
+		{
+			"tag": "abilities",
+			"patterns": [
+				"what are your abilities ?",
+				"What skills do you possess?",
+				"What skills do you have?",
+				"What is the website used for?",
+				"How can you help?",
+				"Can you do anything?",
+				"What are your options?",
+				"How can you help?",
+				"What actions are possible?",
+				"What options do you have?",
+				"What activities are possible?",
+				"what are your commands"
+			],
+			"responses": [
+				"I can provide information about the website, product, delivery, payments, customer support. etc",
+				"I can give details about the website, the goods, shipping, payments, and customer support, among other things.",
+				"I am able to offer details regarding the website, the goods, shipping, payments, and customer service, among other things.",
+				"I am able to give details about the website, the goods, delivery, payments, and customer service, among other things."
+			]
+		},
+		{
 			"tag": "thanks",
 			"patterns": [
 				"Thanks",
@@ -50,80 +120,640 @@
 			"responses": ["Happy to help!", "Any time!", "My pleasure"]
 		},
 		{
-			"tag": "books",
+			"tag": "funny",
 			"patterns": [
-				"Which items do you have?",
-				"What kinds of items are there?",
-				"What do you sell?"
-			],
-			"responses": ["We sell books", "We have books"]
-		},
-		{
-			"tag": "book-types",
-			"patterns": [
-				"Which books do you sell?",
-				"What kinds of books are there?",
-				"What are the genre of the books?"
+				"Tell me a joke!",
+				"Tell me something funny!",
+				"Do you know a joke?",
+				"Make me laugh!",
+				"A joke, please!",
+				"Please tell me a joke!"
 			],
 			"responses": [
-				"We sell books of genre- Romance, SCI-FI, Self-Help, Thriller ,Fiction, Horror",
-				"We provide books in the following genres: Romance, SCI-FI, Self-Help, Thriller ,Fiction and Horror",
-				"Books of many genres, including Romance, Science Fiction, Self-Help, Thrillers, Fiction, and Horror, are available from us."
+				"Backend not trained to crack jokes!",
+				"No one in the backend is funny!",
+				"Backend not trained to make jokes!",
+				"Here, we don't do that!",
+				"This is not how we operate!",
+				"That's not how things work around here!",
+				"We dont do that here!"
 			]
 		},
 		{
 			"tag": "payments",
 			"patterns": [
+				"What are payment methods",
+				"what are the payment options ?",
+				"What options are there for paying?",
+				"how do i pay?",
+				"How can I pay?",
+				"What are other ways to pay?",
+				"What additional payment options exist?",
+				"Which further payment options are there?",
 				"Do you take credit cards?",
+				"Accept credit cards are you?",
+				"You accept credit cards, right?",
 				"Do you accept Mastercard?",
+				"Does Mastercard work here?",
+				"Do you take Mastercard?",
 				"Can I pay with Paypal?",
-				"Are you cash only?"
+				"Can I use PayPal to pay?",
+				"Can I make a purchase using PayPal?",
+				"Are you cash only?",
+				"Do you only take cash?",
+				"Is cash only accepted?"
 			],
 			"responses": [
 				"We accept VISA, Mastercard and Paypal",
+				"VISA, Mastercard, and Paypal are all accepted.",
+				"We accept Paypal and the majority of credit cards.",
+				"Most major credit cards as well as Paypal are accepted.",
+				"We take PayPal as well as the majority of credit cards.",
 				"We accept most major credit cards, and Paypal"
 			]
 		},
 		{
-			"tag": "payments-help",
-			"patterns": ["Do you provide emi?", "Any scope of EMI?"],
+			"tag": "payments-emi-option",
+			"patterns": [
+				"Do you provide emi?",
+				"Any scope of EMI?",
+				"You offer emi, right?"
+			],
 			"responses": [
 				"Sorry we dont provide EMI option",
+				"We regret not offering an EMI option.",
+				"Sorry, there is no EMI option available.",
+				"We apologise but we don't provide an EMI option.",
 				"No, EMI is not provided"
 			]
 		},
 		{
-			"tag": "delivery",
+			"tag": "shipping--delivery-time",
 			"patterns": [
 				"How long does delivery take?",
+				"How long does it take to deliver?",
+				"What is the delivery time?",
 				"How long does shipping take?",
-				"When do I get my delivery?"
+				"When do I get my delivery?",
+				"How long does it take to deliver something?"
 			],
-			"responses": ["Delivery takes 2-4 days", "Shipping takes 2-4 days"]
+			"responses": [
+				"Delivery takes 2-4 days",
+				"Shipping takes 2-4 days",
+				"It takes 2-4 days to deliver.",
+				"Takes 2-4 days to deliver"
+			]
 		},
 		{
-			"tag": "return",
+			"tag": "shipping--shipping-options",
 			"patterns": [
+				"What shipping choices are available?",
+				"What are the shipping options available?",
+				"What choices are there for shipping?",
+				"What delivery choices are there?"
+			],
+			"responses": [
+				"We provide a variety of shipping choices, including express, accelerated, and normal delivery. Depending on where you are, other solutions can be available.",
+				"We offer multiple shipping options including standard, expedited, and express delivery. The available options may vary depending on your location",
+				"Standard, expedited, and express delivery are just a few of the shipping choices we provide. Depending on where you are, there can be different options available.",
+				"Takes 2-4 days to deliver"
+			]
+		},
+		{
+			"tag": "shipping--shipping-international",
+			"patterns": [
+				"Do you offer international shipping?",
+				"Do you provide shipping to other countries?",
+				"Do you provide shipping abroad?",
+				"Can I order from outside the country?"
+			],
+			"responses": [
+				"Yes, we ship internationally to many nations. To verify if we can ship to your location, please provide your shipping address during the purchase process.",
+				"Yes, we offer international shipping to many countries. Please provide your shipping address during checkout to see if we ship to your location.",
+				"Yes, we ship internationally to a lot of nations. When checking out, kindly provide your shipping address to determine whether we can deliver to your area.",
+				"The answer is that we ship internationally to numerous nations. If you want to know if we deliver to your area, please enter your shipping address during the checkout process."
+			]
+		},
+		{
+			"tag": "order--track-order",
+			"patterns": [
+				"Can I track my order?",
+				"Can my order be tracked?",
+				"Do you allow order tracking?",
+				"My order can I track?"
+			],
+			"responses": [
+				"If you log into your account and go to the order history section, you may track your order. The tracking data can be found there.",
+				"Yes, you may follow the progress of your order by login into your account and visiting the order history page. The tracking information is located there.",
+				"In order to track your order, log into your account and go to the order history page. The tracking information can be found there."
+			]
+		},
+		{
+			"tag": "order--change-shipping-address",
+			"patterns": [
+				"Can I alter my order's shipping address?",
+				"Is it possible to alter the mailing address for my order?",
+				"Can I alter the mailing address for my order?",
+				"I've still not received my delivery. Where do I go from here?",
+				"My package still hasn't come. What steps should I take next?",
+				"Can I change the mailing address for my order?"
+			],
+			"responses": [
+				"We might be able to change the mailing address if your order hasn't been sent yet. For more help, please get in touch with our customer support team as soon as you can with the specifics of your order.",
+				"We could change the shipment address if your order hasn't left the warehouse yet. For additional help, please get in touch with our customer support team as soon as possible with your order information.",
+				"We might be able to change the mailing address if your order hasn't yet been dispatched. For additional help, please get in touch with our customer support team as soon as you can with the details of your order."
+			]
+		},
+		{
+			"tag": "order--package-not-received",
+			"patterns": [
+				"i havent recieved my ordered product yet",
+				"I have not yet received the ordered item.",
+				"My package still hasn't arrived. How should I proceed?",
+				"My package hasn't arrived yet. What must I do?",
+				"My package has yet to show up. What should I do next?",
+				"I've still not received my delivery. Where do I go from here?",
+				"My package still hasn't come. What steps should I take next?"
+			],
+			"responses": [
+				"I regret this inconvenience. Contact our customer service department at support@bookclub.com with the specifics of your order, and they will help you to solve the problem.",
+				"I'm sorry this has caused you trouble. Your order information can be sent to our customer support staff at support@bookclub.com, and they will help you to resolve the problem.",
+				"I'm sorry it caused you any trouble. Send an email to support@bookclub.com with the specifics of your order so that our customer care team can help you with the problem.",
+				"I regret the inconvenience. Contact our customer service department at support@bookclub.com with the details of your order, and they will help you to resolve the problem.",
+				"I'm sorry this has caused you trouble. Your order information can be sent to our customer support staff at support@bookclub.com, and they will help you to resolve the problem."
+			]
+		},
+		{
+			"tag": "product-return",
+			"patterns": [
+				"how to return a product?",
+				"how to do a product return?",
+				"How do I send something back?",
+				"what are the return options",
+				"What choices are there for returns?",
+				"What options are there for returning the product?",
+				"What are the options for returning the product?",
+				"what are the return options for the product ?",
 				"Do you provide return facility",
-				"Do you have a facility for returns?",
-				"DO YOU OFFER A RETURN FACILITY?"
+				"Do you offer a return service?",
+				"Do you have a return policy?",
+				"Do you have a facility for returns?"
 			],
 			"responses": [
 				"Yes, You can return within 2-4 days of delivery",
+				"Yes, within 2-4 days after delivery, you may return an item.",
+				"It is possible to return an item within 2-4 days of delivery.",
 				"You may return items within 2-4 days of delivery",
 				"Yes, within 2-4 days after delivery you may return an item."
 			]
 		},
 		{
-			"tag": "funny",
+			"tag": "defective-product-return",
 			"patterns": [
-				"Tell me a joke!",
-				"Tell me something funny!",
-				"Do you know a joke?"
+				"i received a broken product",
+				"I got a faulty product.",
+				"I got a defective item.",
+				"I got something that was broken. How should I proceed?",
+				"I received a defective item. What should I do?",
+				"The thing I got was broken. Do I do something?",
+				"I got a faulty item. What must I do?"
 			],
 			"responses": [
-				"Backend not trained to crack jokes!",
-				"We dont do that here!"
+				"We are sorry for the trouble. Please provide your order information and specifics on the fault to our customer service team. They'll help you set up a replacement or refund.",
+				"We apologize for the inconvenience. Please contact our customer support team with your order details and information about the defect. They will assist you in arranging a replacement or refund.",
+				"Please accept our sincere apologies. Give the details of your order and the details regarding the fault to our customer service team when you contact them. If you need a replacement or a refund, they will help you set it up.",
+				"We regret the inconvenience. Give your order information and specifics on the fault to our customer service team when you contact them. They will help you set up a replacement or refund."
+			]
+		},
+		{
+			"tag": "account--forgot-password",
+			"patterns": [
+				"I forgot my password. How can I reset it?",
+				"I misplaced my password. Just how do I reset it?",
+				"My passphrase is lost. Why can't I reset it?",
+				"My password is gone. How can I reset it?"
+			],
+			"responses": [
+				"No problem! On the login page, click on the 'Forgot Password' link and follow the instructions to reset your password. You'll receive an email with further instructions.",
+				"No issue! To change your password, click the 'Forgot Password' link on the login page and follow the prompts. You will get an email with more information.",
+				"Not a problem To change your password, go to the login page, click the 'Forgot Password' link, and then follow the on-screen directions. Additional instructions will be sent to you via email.",
+				"No issues! To change your password, go to the login page, click the 'Forgot Password' link, and then follow the prompts. Additional instructions will be included in the email you receive."
+			]
+		},
+		{
+			"tag": "discounts--ongoing-discounts",
+			"patterns": [
+				"Are there any ongoing promotions or discounts?",
+				"Exist any current specials or discounts?",
+				"Existing sales or discounts are there?",
+				"Exist any active specials or discounts?"
+			],
+			"responses": [
+				"We frequently provide ongoing specials and discounts. To be informed about the most recent deals, visit our website or sign up for our email.",
+				"We often have ongoing promotions and discounts. You can check our website or subscribe to our newsletter to stay updated on the latest offers",
+				"We frequently provide ongoing discounts and promotions. For the most recent deals, check out our website or sign up for our email.",
+				"Regular sales and discounts are offered by us. To keep up with the newest deals, visit our website or sign up for our email."
+			]
+		},
+		{
+			"tag": "discounts--how-apply-coupon",
+			"patterns": [
+				"How can I apply a coupon code?",
+				"How do I use a promotional code?",
+				"How should a promo code be used?",
+				"I need to know how to use a promo code."
+			],
+			"responses": [
+				"During the checkout process, you can apply a coupon code by entering it in the designated field. The discount will be applied to your order if the code is valid.",
+				"You can use a promo code by putting it in the appropriate field during the checkout process. If the code is legitimate, the discount will be applied to your order.",
+				"By inputting the code in the appropriate section during the checkout process, you can use a coupon. If the promo code is valid, the discount will be applied to your order.",
+				"A promo code can be used by entering it in the appropriate field during the checkout process. As long as the code is active, the discount will be applied to your order."
+			]
+		},
+		{
+			"tag": "customer-support",
+			"patterns": [
+				"Can I talk to a customer service agent?",
+				"Can I speak to a customer representative?",
+				"Can I get in touch with a customer service agent?",
+				"i want to talk to customer support",
+				"I want to speak with customer service.",
+				"I need to contact customer service.",
+				"I would like to contact customer service.",
+				"Is there a customer service agent available?"
+			],
+			"responses": [
+				"Certainly! Our customer support team is available to assist you. You can reach out to them through our helpline at [phone number] or by sending an email to support@bookclub.com",
+				"Certainly! You can get help from our customer support team at any time. You can get in touch with them by calling [phone number] or emailing support@bookclub.com.",
+				"Certainly! You can get help from our customer service staff. By calling [phone number] or emailing support@bookclub.com, you can get in touch with them.",
+				"Certainly! We have a team dedicated to customer assistance ready to help. You can contact them by calling [phone number] on our helpline or by writing to support@bookclub.com."
+			]
+		},
+		{
+			"tag": "book-types",
+			"patterns": [
+				"Which books do you sell?",
+				"What genre of books do you sell?",
+				"What types of books do you sell?",
+				"Exactly what books do you sell?",
+				"What kind of literature do you sell?",
+				"Which book categories do you sell?",
+				"what are the specified genres",
+				"which genres are included?",
+				"what are the aforementioned genres?"
+			],
+			"responses": [
+				"We offer novels in the romance, science fiction, self-help, thriller, fiction, and horror genres.",
+				"We provide a variety of genres, including romance, science fiction, self-help, thrillers, and horror.",
+				"We provide novels, science fiction, self-help, thrillers, fiction, and horror publications.",
+				"We provide books in the following genres: romance, science fiction, self-help, thriller, fiction, and horror."
+			]
+		},
+		{
+			"tag": "popular-books-link",
+			"patterns": [
+				"What are the popular books that you have?",
+				"What are some of the best-selling books you have?",
+				"What are some of your best-selling books?",
+				"Which of your books are the best-selling ones?",
+				"show me your top selections.",
+				"Show me your best books",
+				"show me books",
+				"a list of books",
+				"show me the books",
+				"display books for me",
+				"recommend me a book",
+				"recommend a book to me",
+				"suggest a book to me",
+				"Pick out a book for me.",
+				"Please suggest a book for me.",
+				"what are the bestselling books",
+				"what books are the most popular ones?",
+				"what novels have the most sales?"
+
+			],
+			"responses": [
+				"Here is the <a href=\"/explore\">link</a> for popular books",	
+				"This <a href=\"/explore\">link</a> contains list of popular books "
+			]
+		},
+		{
+			"tag": "popular-books-fiction-link",
+			"patterns": [
+				"give me famous Fiction books",
+				"show me famous Fiction books",
+				"What are the books in fiction",
+				"What fiction titles are in demand?",
+				"Which fiction titles are most read?",
+				"What fiction books are in demand?",
+				"Recommend me books in fiction.",
+				"Please suggest fiction books for me.",
+				"Please suggest any fiction books for me.",
+				"give me recommendation of fiction books",
+				"Please propose some fiction to me.",
+				"provide me with suggestions for fiction literature."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Fiction\">link</a> for popular books in fiction",
+				"This is the <a href=\"/explore/books/Fiction\">link</a> to some well-liked fiction books.",
+				"Popular fiction books can be found at this <a href=\"/explore/books/Fiction\">link</a>.",
+				"Popular fiction books can be found by clicking this <a href=\"/explore/books/Fiction\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-books-romance-link",
+			"patterns": [
+				"give me famous Romance books",
+				"show me famous romantic books",
+				"What are the popular books in romance",
+				"What romance titles are in demand?",
+				"Which romance titles are most widely read?",
+				"What romance books are in demand?",
+				"Recommend me books in romance",
+				"Please suggest romance books for me.",
+				"Please suggest any romance books for me.",
+				"Please recommend me any romantic literature.",
+				"Please suggest any romance books for me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Romance\">link</a> for popular books in Romance",
+				"This is the <a href=\"/explore/books/Romance\">link</a> to some well-liked Romantic books.",
+				"Popular Romance books can be found at this <a href=\"/explore/books/Romance\">link</a>.",
+				"Popular Romance books can be found by clicking this <a href=\"/explore/books/Romance\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-books-thriller-link",
+			"patterns": [
+				"give me famous Thriller books",
+				"show me famous thrilling books",
+				"What are the popular books in thriller",
+				"What thriller titles are in demand?",
+				"Which thriller titles are most widely read?",
+				"What thriller books are in demand?",
+				"Recommend me books in thriller",
+				"Please suggest thriller books for me.",
+				"Please suggest any thriller books for me.",
+				"Please recommend me any thriller literature.",
+				"Please suggest any thriller books for me.",
+				"Please recommend any suspenseful books to me.",
+				"recommend any thrillers",
+				"Please recommend any thrilling books to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Thriller\">link</a> for popular books in Thriller",
+				"This is the <a href=\"/explore/books/Thriller\">link</a> to some well-liked suspenseful books.",
+				"Popular Thriller books can be found at this <a href=\"/explore/books/Thriller\">link</a>.",
+				"Popular Thriller books can be found by clicking this <a href=\"/explore/books/Thriller\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-books-scifi-link",
+			"patterns": [
+				"give me famous Scifi books",
+				"show me famous science fiction books",
+				"What are the popular books in Sci-Fi",
+				"What are the popular books in Science Fiction",
+				"What Sci-Fi titles are in demand?",
+				"Which Sci-Fi titles are most widely read?",
+				"What Scifi books are in demand?",
+				"Recommend me books in Sci-Fi",
+				"Please suggest Scifi books for me.",
+				"Please suggest any Sci-Fi books for me.",
+				"Please recommend me any Sci-Fi literature.",
+				"Please suggest any Scifi books for me.",
+				"Please recommend any Science Fiction books to me.",
+				"recommend any Sci-Fi books",
+				"Please recommend any Science Fiction books to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Sci-Fi\">link</a> for popular books in Sci-Fi",
+				"This is the <a href=\"/explore/books/Sci-Fi\">link</a> to some well-liked Sci-Fi books.",
+				"Popular Sci-Fi books can be found at this <a href=\"/explore/books/Sci-Fi\">link</a>.",
+				"Popular Sci-Fi books can be found by clicking this <a href=\"/explore/books/Sci-Fi\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-books-selfhelp-link",
+			"patterns": [
+				"What are the popular books in Self Help",
+				"What are the popular books in Motivation",
+				"Best books with motivaton",
+				"What Self Help titles are in demand?",
+				"Which Self Help titles are most widely read?",
+				"What Self-Help books are in demand?",
+				"Recommend me books in Self-Help",
+				"Please suggest Self-Help books for me.",
+				"Please suggest any Self Help books for me.",
+				"Please recommend me any Self Help literature.",
+				"Please suggest any Self-Help books for me.",
+				"Please recommend any motivation books to me.",
+				"recommend any Self Helps",
+				"Please recommend any Self Help books to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Self%20Help\">link</a> for popular books in Self Help Category",
+				"This is the <a href=\"/explore/books/Self%20Help\">link</a> to some well-liked Self Help books.",
+				"Popular Self Help books can be found at this <a href=\"/explore/books/Self%20Help\">link</a>.",
+				"Popular Self Help books can be found by clicking this <a href=\"/explore/books/Self%20Help\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-books-horror-link",
+			"patterns": [
+				"give me famous Horror books",
+				"show me famous scary books",
+				"What are the popular books in Horror",
+				"What scary titles are in demand?",
+				"Which scary titles are most widely read?",
+				"What Horror books are in demand?",
+				"Recommend me books in Horror",
+				"Please suggest Horror books for me.",
+				"Please suggest any horrific books for me.",
+				"Please recommend me any scary literature.",
+				"Please suggest any Horror books for me.",
+				"Please recommend any horrific books to me.",
+				"recommend any scarys",
+				"Please recommend any scary books to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Horror\">link</a> for popular books in Horror Category",
+				"This is the <a href=\"/explore/books/Horror\">link</a> to some well-liked Horror books.",
+				"Popular Horror books can be found at this <a href=\"/explore/books/Horror\">link</a>.",
+				"Popular Horror books can be found by clicking this <a href=\"/explore/books/Horror\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-link",
+			"patterns": [
+				"Which authors do you have?",
+				"What writers do you have?",
+				"You have which authors?",
+				"What authors do you have?",
+				"Give me list of authors",
+				"Show me list of authors",
+				"list of authors, please",
+				"send me a list of authors",
+				"provide me with a list of authors",
+				"how many authors do you have ?",
+				"What number of writers do you have?",
+				"show me authors",
+				"show me the writers",
+				"Authors, please",
+				"bring me authors",
+				"Show me the authors",
+				"what authors are there in the library"
+
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors\">link</a> for very Popular Authors",
+				"This is the <a href=\"/explore/authors\">link</a> to some well-liked Authors.",
+				"Popular Book Authors can be found at this <a href=\"/explore/authors\">link</a>.",
+				"Popular Book Authors can be found by clicking this <a href=\"/explore/authors\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-fiction-link",
+			"patterns": [
+				"give me famous author writing Fiction books",
+				"show me famous author writing Fiction books",
+				"Who are the popular books author in Fiction",
+				"What author's Ficton titles are in demand?",
+				"Which author's Fiction titles are most widely read?",
+				"What Fiction books authors are in demand?",
+				"Recommend me books of Fiction Writers",
+				"Please suggest Fiction books Authors for me.",
+				"Please suggest any Fiction book's author for me.",
+				"Please suggest any Fiction books author for me.",
+				"Please recommend any Fiction books writer to me.",
+				"recommend any Fiction authors",
+				"Please recommend any Fiction books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/books/Fiction\">link</a> for popular books author in Fiction Category",
+				"This is the <a href=\"/explore/books/Fiction\">link</a> to some well-liked Fiction books Writers.",
+				"Popular Fiction books authors can be found at this <a href=\"/explore/books/Fiction\">link</a>.",
+				"Popular Fiction books authors can be found by clicking this <a href=\"/explore/books/Fiction\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-romance-link",
+			"patterns": [
+				"give me famous author writing Romance books",
+				"show me famous author writing Romance books",
+				"Who are the popular books author in Romance",
+				"What author's Romantic titles are in demand?",
+				"Which author's Romance titles are most widely read?",
+				"What Romance books authors are in demand?",
+				"Recommend me books of Romance Writers",
+				"Please suggest Romance books Authors for me.",
+				"Please suggest any Romance book's author for me.",
+				"Please suggest any Romance books author for me.",
+				"Please recommend any Romance books writer to me.",
+				"recommend any Romance authors",
+				"Please recommend any Romance books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors/Romance\">link</a> for popular books author in Romance Category",
+				"This is the <a href=\"/explore/authors/Romance\">link</a> to some well-liked Romance books Writers.",
+				"Popular Romance books authors can be found at this <a href=\"/explore/authors/Romance\">link</a>.",
+				"Popular Romance books authors can be found by clicking this <a href=\"/explore/authors/Romance\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-selfhelp-link",
+			"patterns": [
+				"give me famous author writing Self Help books",
+				"show me famous author writing Self Help books",
+				"Who are the popular books author in Science Fiction",
+				"What author's Self Help titles are in demand?",
+				"Which author's Self Help titles are most widely read?",
+				"What Self Help books authors are in demand?",
+				"Recommend me books of Self Help Writers",
+				"Please suggest Self Help books Authors for me.",
+				"Please suggest any Self Help book's author for me.",
+				"Please suggest any Self Help books author for me.",
+				"Please recommend any Self Help books writer to me.",
+				"recommend any Self Help authors",
+				"Please recommend any Self Help books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors/Self%20Help\">link</a> for popular books author in Self Help Category",
+				"This is the <a href=\"/explore/authors/Self%20Help\">link</a> to some well-liked Self Help books Writers.",
+				"Popular Self Help books authors can be found at this <a href=\"/explore/authors/Self%20Help\">link</a>.",
+				"Popular Self Help books authors can be found by clicking this <a href=\"/explore/authors/Self%20Help\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-thriller-link",
+			"patterns": [
+				"give me famous author writing Thriller books",
+				"show me famous author writing Thriller books",
+				"Who are the popular books author in Thriller",
+				"What author's Thriller titles are in demand?",
+				"Which author's Thriller titles are most widely read?",
+				"What Thriller books authors are in demand?",
+				"Recommend me books of Thriller Writers",
+				"Please suggest Thriller books Authors for me.",
+				"Please suggest any Thriller book's author for me.",
+				"Please suggest any Thriller books author for me.",
+				"Please recommend any Thriller books writer to me.",
+				"recommend any Thriller authors",
+				"Please recommend any Thriller books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors/Thriller\">link</a> for popular books author in Thriller Category",
+				"This is the <a href=\"/explore/authors/Thriller\">link</a> to some well-liked Thriller books Writers.",
+				"Popular Thriller books authors can be found at this <a href=\"/explore/authors/Thriller\">link</a>.",
+				"Popular Thriller books authors can be found by clicking this <a href=\"/explore/authors/Thriller\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-scifi-link",
+			"patterns": [
+				"give me famous author writing SciFi books",
+				"show me famous author writing Sci-Fi books",
+				"Who are the popular books author in Science Fiction",
+				"What author's Sci-Fi titles are in demand?",
+				"Which author's scifi titles are most widely read?",
+				"What Sci-Fi books authors are in demand?",
+				"Recommend me books of scifi Writers",
+				"Please suggest Sci-Fi books Authors for me.",
+				"Please suggest any scifi book's author for me.",
+				"Please suggest any Sci-Fi books author for me.",
+				"Please recommend any Scifi books writer to me.",
+				"recommend any Sci-Fi authors",
+				"Please recommend any Scifi books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors/Sci-Fi\">link</a> for popular books author in Sci-Fi Category",
+				"This is the <a href=\"/explore/authors/Sci-Fi\">link</a> to some well-liked Sci-Fi books Writers.",
+				"Popular Sci-Fi books authors can be found at this <a href=\"/explore/authors/Sci-Fi\">link</a>.",
+				"Popular Sci-Fi books authors can be found by clicking this <a href=\"/explore/authors/Sci-Fi\">link</a>"
+			]
+		},
+		{
+			"tag": "popular-authors-horror-link",
+			"patterns": [
+				"give me famous author writing Horror books",
+				"show me famous author writing scary books",
+				"Who are the popular books author in Horror",
+				"What author's scary titles are in demand?",
+				"Which author's scary titles are most widely read?",
+				"What Horror books authors are in demand?",
+				"Recommend me books of Horror Writers",
+				"Please suggest Horror books Authors for me.",
+				"Please suggest any horrific book's author for me.",
+				"Please suggest any Horror books author for me.",
+				"Please recommend any horrific books writer to me.",
+				"recommend any scary authors",
+				"Please recommend any scary books authors to me."
+			],
+			"responses": [
+				"This is the <a href=\"/explore/authors/Horror\">link</a> for popular books author in Horror Category",
+				"This is the <a href=\"/explore/authors/Horror\">link</a> to some well-liked Horror books Writers.",
+				"Popular Horror books authors can be found at this <a href=\"/explore/authors/Horror\">link</a>.",
+				"Popular Horror books authors can be found by clicking this <a href=\"/explore/authors/Horror\">link</a>"
 			]
 		}
 	]
