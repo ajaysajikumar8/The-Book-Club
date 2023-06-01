@@ -122,23 +122,24 @@
 }
 
 .section-landing {
-	height: 100vh;
-	background-size: cover;
-	background: black; /* Replace with your desired gradient colors */
-	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
-	padding: 90px;
-	color: #ffffff;
+    height: 100vh;
+    background-size: cover;
+    /* background: black; */
+    /* box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); */
+    padding: 90px;
+    /* color: #ffffff; */
 }
 
 .heading-primary-up {
-	font-size: 2.5rem;
-	color: #dee2e6;
-	letter-spacing: 1;
-	transform: translate(1%, 160%);
-	animation-name: floating;
-	animation-duration: 1.4s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
+    font-size: 2.7rem;
+    /* color: #dee2e6; */
+    letter-spacing: 1;
+	font-weight: 700;
+    transform: translate(1%, 160%);
+    animation-name: floating;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 @keyframes floating {
 	0% {
@@ -153,15 +154,14 @@
 }
 
 .hero-description-up {
-	font-size: 1.4rem;
-	line-height: 2;
-	letter-spacing: 3.6px;
-	color: #adb5bd;
-	margin-bottom: 1.8rem;
-	transform: translate(0%, -110%);
-	position: relative;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    /* color: #adb5bd; */
+    margin-bottom: 1.8rem;
+    transform: translate(0%, -110%);
+    position: relative;
 }
-
 /*services*/
 
 .services {
@@ -390,11 +390,11 @@
 }
 
 .image-chat img:first-child {
-	animation-delay: 1.4s;
+	animation-delay: 0.4s;
 }
 
 .image-chat img:last-child {
-	animation-delay: 4s;
+	animation-delay: 2s;
 }
 
 @keyframes fadeAnimation {

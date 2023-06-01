@@ -19,7 +19,6 @@
 				"Hi there, how can I help?",
 				"Hello, what can I do to help you?",
 				"How may I help you, please?"
-
 			]
 		},
 		{
@@ -75,7 +74,11 @@
 			"patterns": [
 				"What does this website do ?",
 				"Why is this website there?",
-				"How does this website function?"
+				"How does this website function?",
+				"what does the site do?",
+				"What is the website used for?",
+				"what are your commands",
+				"what are your instructions?"
 			],
 			"responses": [
 				"We sell books",
@@ -88,7 +91,16 @@
 			"patterns": [
 				"what are your abilities ?",
 				"What skills do you possess?",
-				"What skills do you have?"
+				"What skills do you have?",
+				"What is the website used for?",
+				"How can you help?",
+				"Can you do anything?",
+				"What are your options?",
+				"How can you help?",
+				"What actions are possible?",
+				"What options do you have?",
+				"What activities are possible?",
+				"what are your commands"
 			],
 			"responses": [
 				"I can provide information about the website, product, delivery, payments, customer support. etc",
@@ -134,7 +146,7 @@
 				"what are the payment options ?",
 				"What options are there for paying?",
 				"how do i pay?",
-				"How can I pay?",	
+				"How can I pay?",
 				"What are other ways to pay?",
 				"What additional payment options exist?",
 				"Which further payment options are there?",
@@ -364,6 +376,10 @@
 				"Can I talk to a customer service agent?",
 				"Can I speak to a customer representative?",
 				"Can I get in touch with a customer service agent?",
+				"i want to talk to customer support",
+				"I want to speak with customer service.",
+				"I need to contact customer service.",
+				"I would like to contact customer service.",
 				"Is there a customer service agent available?"
 			],
 			"responses": [
@@ -381,7 +397,10 @@
 				"What types of books do you sell?",
 				"Exactly what books do you sell?",
 				"What kind of literature do you sell?",
-				"Which book categories do you sell?"
+				"Which book categories do you sell?",
+				"what are the specified genres",
+				"which genres are included?",
+				"what are the aforementioned genres?"
 			],
 			"responses": [
 				"We offer novels in the romance, science fiction, self-help, thriller, fiction, and horror genres.",
@@ -398,10 +417,24 @@
 				"What are some of your best-selling books?",
 				"Which of your books are the best-selling ones?",
 				"show me your top selections.",
-				"Show me your best books"
+				"Show me your best books",
+				"show me books",
+				"a list of books",
+				"show me the books",
+				"display books for me",
+				"recommend me a book",
+				"recommend a book to me",
+				"suggest a book to me",
+				"Pick out a book for me.",
+				"Please suggest a book for me.",
+				"what are the bestselling books",
+				"what books are the most popular ones?",
+				"what novels have the most sales?"
+
 			],
 			"responses": [
-				"Here is the <a href=\"/explore\">link</a> for popular books"
+				"Here is the <a href=\"/explore\">link</a> for popular books",	
+				"This <a href=\"/explore\">link</a> contains list of popular books "
 			]
 		},
 		{
@@ -409,13 +442,16 @@
 			"patterns": [
 				"give me famous Fiction books",
 				"show me famous Fiction books",
-				"What are the popular books in fiction",
+				"What are the books in fiction",
 				"What fiction titles are in demand?",
-				"Which fiction titles are most widely read?",
+				"Which fiction titles are most read?",
 				"What fiction books are in demand?",
 				"Recommend me books in fiction.",
 				"Please suggest fiction books for me.",
-				"Please suggest any fiction books for me."
+				"Please suggest any fiction books for me.",
+				"give me recommendation of fiction books",
+				"Please propose some fiction to me.",
+				"provide me with suggestions for fiction literature."
 			],
 			"responses": [
 				"This is the <a href=\"/explore/books/Fiction\">link</a> for popular books in fiction",
@@ -487,7 +523,7 @@
 				"Please recommend me any Sci-Fi literature.",
 				"Please suggest any Scifi books for me.",
 				"Please recommend any Science Fiction books to me.",
-				"recommend any Sci-Fis",
+				"recommend any Sci-Fi books",
 				"Please recommend any Science Fiction books to me."
 			],
 			"responses": [
@@ -560,7 +596,14 @@
 				"send me a list of authors",
 				"provide me with a list of authors",
 				"how many authors do you have ?",
-				"What number of writers do you have?"
+				"What number of writers do you have?",
+				"show me authors",
+				"show me the writers",
+				"Authors, please",
+				"bring me authors",
+				"Show me the authors",
+				"what authors are there in the library"
+
 			],
 			"responses": [
 				"This is the <a href=\"/explore/authors\">link</a> for very Popular Authors",
